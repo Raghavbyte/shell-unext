@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@variables('DataArray')",
+						"value": "@pipeline().paramerters.account_name",
 						"type": "Expression"
 					},
 					"condition": {
@@ -19,6 +19,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"account_name": {
+				"type": "array",
+				"defaultValue": [
+					"a",
+					"b",
+					"c",
+					"d"
+				]
+			}
+		},
 		"variables": {
 			"DataArray": {
 				"type": "Array",
