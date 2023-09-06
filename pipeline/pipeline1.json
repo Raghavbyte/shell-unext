@@ -9,11 +9,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().paramerters.account_name",
+						"value": "@pipeline().parameters.account_name",
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@not(equals(item(),'ccc'))",
+						"value": "@not(equals(item(),'c'))",
 						"type": "Expression"
 					}
 				}
