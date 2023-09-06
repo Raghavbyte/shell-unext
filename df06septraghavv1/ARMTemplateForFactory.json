@@ -111,11 +111,11 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@variables('DataArray')",
+								"value": "@pipeline().parameters.account_name",
 								"type": "Expression"
 							},
 							"condition": {
-								"value": "@not(equals(item(),'ccc'))",
+								"value": "@not(equals(item(),'c'))",
 								"type": "Expression"
 							}
 						}
@@ -124,6 +124,17 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"parameters": {
+					"account_name": {
+						"type": "array",
+						"defaultValue": [
+							"a",
+							"b",
+							"c",
+							"d"
+						]
+					}
 				},
 				"variables": {
 					"DataArray": {
